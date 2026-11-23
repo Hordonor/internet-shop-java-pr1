@@ -1,0 +1,6 @@
+target/
+pr1/*.pdf
+.idea/
+*.iml
+.vscode/
+*.class
