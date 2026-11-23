@@ -11,7 +11,12 @@ Lombok підключено як `provided` dependency та налаштован
 
 ## Запуск
 
+Рекомендований спосіб на Windows: запустіть у терміналі `run.bat`. Скрипт перемикає консоль на UTF-8, щоб українські літери, зокрема «І», відображались правильно.
+
+Або вручну в PowerShell:
+
 ```powershell
+chcp 65001
 mvn clean compile
 mvn exec:java
 ```
@@ -19,7 +24,8 @@ mvn exec:java
 На Windows також можна запустити зібраний застосунок командою:
 
 ```powershell
-java -cp target/classes ua.edu.shop.Main
+chcp 65001
+java -Dfile.encoding=UTF-8 -cp target/classes ua.edu.shop.Main
 ```
 
 ## Можливості
