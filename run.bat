@@ -5,8 +5,11 @@ set "MAVEN_OPTS=-Dfile.encoding=UTF-8"
 
 where mvn >nul 2>nul
 if errorlevel 1 (
-    set "MVN=%LOCALAPPDATA%\Programs\Apache\apache-maven-3.9.11\bin\mvn.cmd"
-    if not exist "%LOCALAPPDATA%\Programs\Apache\apache-maven-3.9.11\bin\mvn.cmd" (
+    set "MVN=%LOCALAPPDATA%\Programs\apache-maven-3.10.2\bin\mvn.cmd"
+    if not exist "%LOCALAPPDATA%\Programs\apache-maven-3.10.2\bin\mvn.cmd" (
+        set "MVN=%LOCALAPPDATA%\Programs\apache-maven-3.9.11\bin\mvn.cmd"
+    )
+    if not exist "%MVN%" (
         echo Maven was not found. Install Maven 3.9 or newer and try again.
         set "RESULT=1"
         goto finish

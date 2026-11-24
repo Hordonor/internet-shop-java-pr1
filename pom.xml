@@ -45,7 +45,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <mainClass>ua.edu.shop.Main</mainClass>
+                    <mainClass>dut.pd3.practics.practic_1.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
